@@ -1,8 +1,8 @@
 # Rex Ndukwu portfolio
 
-Website source for Rex Ndukwu's cybersecurity portfolio and its Vercel review deployment. The content is based on the approved brief and supplied evidence kept outside this repository.
+Website source for Rex Ndukwu's cybersecurity portfolio. The content is based on the approved brief and supplied evidence kept outside this repository.
 
-- Live review: https://rex-portfolio-preview.vercel.app
+- Live site: https://rex-ndukwu-portfolio.vercel.app
 - Production branch: `main`
 
 ## Preview
