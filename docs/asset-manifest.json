@@ -1,0 +1,61 @@
+{
+  "status": "Rex review assets; final selection remains subject to Rex's feedback",
+  "sourceInventory": "C:/Users/AKINYOOLA SAMUEL/Documents/projects/Blackins Website Development System/rex-portfolio/Rex_Portfolio_Slide_Assets/image-inventory.json",
+  "images": [
+    {
+      "file": "assets/images/wazuh-agent-setup.png",
+      "source": "Wazuh presentation, slide 4, image 1",
+      "context": "Agent installation and service-start steps",
+      "publicReview": "pending review of paths and network identifiers"
+    },
+    {
+      "file": "assets/images/wazuh-active-agent.png",
+      "source": "Wazuh presentation, slide 5, image 1",
+      "context": "One active Windows endpoint at time of capture",
+      "publicReview": "pending removal of unnecessary device and private network details"
+    },
+    {
+      "file": "assets/images/virustotal-eicar.png",
+      "source": "Wazuh presentation, slide 11, image 1",
+      "context": "VirusTotal report for EICAR test file; not a Wazuh alert or incident count",
+      "publicReview": "pending full-resolution visual review"
+    },
+    {
+      "file": "assets/images/openssh-reference.png",
+      "source": "Research presentation, slide 5, image 1",
+      "context": "OpenSSH research reference, not Rex's own scan output",
+      "publicReview": "pending full-resolution visual review"
+    },
+    {
+      "file": "assets/images/cvss-reference.png",
+      "source": "Research presentation, slide 6, image 1",
+      "context": "Recorded CVSS v3.x 7.0 High reference",
+      "publicReview": "pending full-resolution visual review"
+    },
+    {
+      "file": "assets/images/cwe-reference.png",
+      "source": "Research presentation, slide 7, image 1",
+      "context": "NVD-CWE-Other reference label",
+      "publicReview": "pending full-resolution visual review"
+    },
+    {
+      "file": "assets/images/jml-joiner-poster.png",
+      "source": "JML_Project_DONE 2026.pptx, slide 7, embedded video poster",
+      "context": "Active Directory Users and Computers in the simulated Evil Corp lab",
+      "publicReview": "included for Rex to review with the JML recording"
+    }
+  ],
+  "videos": [
+    {
+      "file": "assets/video/jml-joiner-phase.mp4",
+      "source": "JML_Project_DONE 2026.pptx, slide 7, ppt/media/media1.mp4",
+      "context": "Approximately 41-second joiner-phase recording showing one user created in the ICT organizational unit",
+      "scope": "Supports manual account creation in the lab; does not demonstrate PowerShell automation, mover or leaver execution, group assignment, or access review"
+    }
+  ],
+  "excluded": [
+    "Wazuh slide 16 integration configuration original with exposed API credential",
+    "Research slide 3 Shodan account/API screen",
+    "Research slide 3 host record until a sanitized derivative is reviewed"
+  ]
+}

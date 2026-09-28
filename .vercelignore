@@ -1,0 +1,7 @@
+.git/
+.github/
+.env*
+docs/
+dev-server.js
+README.md
+
