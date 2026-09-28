@@ -2,6 +2,9 @@
 
 Website source for Rex Ndukwu's cybersecurity portfolio and its Vercel review deployment. The content is based on the approved brief and supplied evidence kept outside this repository.
 
+- Live review: https://rex-portfolio-preview.vercel.app
+- Production branch: `main`
+
 ## Preview
 
 From this folder, run `node dev-server.js`. It binds to `127.0.0.1:4173`, or the next available port. In PowerShell, set a fixed port with `$env:PORT='4280'; node dev-server.js`.
