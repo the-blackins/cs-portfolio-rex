@@ -115,7 +115,11 @@
       items.forEach(({ label, href, download }) => {
         const link = document.createElement('a');
         link.href = href;
-        link.textContent = label;
+        link.append(document.createTextNode(label));
+        const arrow = document.createElement('span');
+        arrow.className = `arrow${download ? ' arrow--down' : ''}`;
+        arrow.setAttribute('aria-hidden', 'true');
+        link.append(arrow);
         if (download) link.download = '';
         list.append(link);
       });
@@ -135,21 +139,21 @@
         case 'whoami': showOutput(profile); break;
         case 'projects': case 'ls projects':
           showOutput('01  Wazuh endpoint monitoring — lab\n02  Identity lifecycle — home lab\n03  Vulnerability research — training assessment');
-          links([{ label: 'Open Wazuh case study ↗', href: urls.wazuh }, { label: 'Open identity case study ↗', href: urls.jml }, { label: 'Open research assessment ↗', href: urls.research }]); break;
+          links([{ label: 'Open Wazuh case study', href: urls.wazuh }, { label: 'Open identity case study', href: urls.jml }, { label: 'Open research assessment', href: urls.research }]); break;
         case 'open wazuh': case 'open jml': case 'open research': {
           const project = command.slice(5);
           window.location.assign(urls[project]); break;
         }
-        case 'certs': showOutput('CERTIFICATIONS\n\nCompTIA Security+ — completed\nISC2 Certified in Cybersecurity — completed\n\nIN PROGRESS\nMicrosoft AZ-104 — expected Q1 2027'); links([{ label: 'View credentials ↗', href: '/#training' }]); break;
-        case 'about': showOutput('Background in cybersecurity training, lab work, and first-line support.'); links([{ label: 'Read about Rex ↗', href: '/#about' }]); break;
-        case 'contact': showOutput('Interested in Junior SOC and systems administration / IAM opportunities.'); links([{ label: 'Contact Rex ↗', href: '/contact/index.html' }, { label: 'LinkedIn ↗', href: 'https://www.linkedin.com/in/rex-ndukwu-476662276/?isSelfProfile=false' }]); break;
-        case 'resume': showOutput('Updated résumé (PDF).'); links([{ label: 'Download résumé ↘', href: '/assets/Rex_Ndukwu_Resume.pdf', download: true }]); break;
+        case 'certs': showOutput('CERTIFICATIONS\n\nCompTIA Security+ — completed\nISC2 Certified in Cybersecurity — completed\n\nIN PROGRESS\nMicrosoft AZ-104 — expected Q1 2027'); links([{ label: 'View credentials', href: '/#training' }]); break;
+        case 'about': showOutput('Background in cybersecurity training, lab work, and first-line support.'); links([{ label: 'Read about Rex', href: '/#about' }]); break;
+        case 'contact': showOutput('Interested in Junior SOC and systems administration / IAM opportunities.'); links([{ label: 'Contact Rex', href: '/contact/index.html' }, { label: 'LinkedIn', href: 'https://www.linkedin.com/in/rex-ndukwu-476662276/?isSelfProfile=false' }]); break;
+        case 'resume': showOutput('Updated résumé (PDF).'); links([{ label: 'Download résumé', href: '/assets/Rex_Ndukwu_Resume.pdf', download: true }]); break;
         case 'theme': case 'theme light': case 'theme dark': {
           const chosen = command === 'theme' ? (root.dataset.theme === 'dark' ? 'light' : 'dark') : command.slice(6);
           store.set('rex-theme', chosen); applyTheme(chosen); showOutput(`Appearance set to ${chosen}.`); break;
         }
         case 'clear': finishTyping(); pending = ''; output.textContent = ''; announce.textContent = 'Terminal cleared.'; current.textContent = ''; break;
-        default: showOutput('Command not found. Type help or use the links below.'); links([{ label: 'Explore work ↗', href: '/#work' }]);
+        default: showOutput('Command not found. Type help or use the links below.'); links([{ label: 'Explore work', href: '/#work' }]);
       }
     }
     form.addEventListener('submit', event => { event.preventDefault(); run(input.value); });
